@@ -5,8 +5,9 @@ using UnityEngine;
 public class GameEventListener : MonoBehaviour, IListener
 {
     public GameEvent GameEvent;
-    public GameEventResponse Response;
     public GameObject Sender;
+    public GameEventResponse Response;
+    
 
     private void OnEnable()
     {   

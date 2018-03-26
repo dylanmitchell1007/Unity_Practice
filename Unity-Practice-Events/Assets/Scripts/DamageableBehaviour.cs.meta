@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ce79ceeb261f7e84db11014b6f8efe7b
+timeCreated: 1522095114
+licenseType: Pro
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - DamageTaken: {fileID: 11400000, guid: bc1411b345232dc4ab1932144cb3ed95, type: 2}
+  - DeathEvent: {fileID: 11400000, guid: 7b89a3161d4759e498cf1cb841a3391d, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

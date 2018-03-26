@@ -32,3 +32,13 @@ public interface ISubscribeable
     void Subscribe(IListener listener);
     void Unsubscribe(IListener listener);
 }
+
+public interface IDamageable
+{
+    void TakeDamage(int amount);
+}
+
+public interface IDamager
+{
+    void DoDamage(IDamageable damageable);
+}

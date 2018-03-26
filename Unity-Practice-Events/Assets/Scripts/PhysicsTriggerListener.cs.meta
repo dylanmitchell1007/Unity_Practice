@@ -5,7 +5,11 @@ licenseType: Pro
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - EventTriggerEntered: {fileID: 11400000, guid: 193af1ad118d0294abad557b2a3136ef,
+      type: 2}
+  - EventTriggerExit: {fileID: 11400000, guid: 4b1c673a4e6c65f47a80d7a66a73d0be, type: 2}
+  - EventTriggerStay: {fileID: 11400000, guid: ac18aa03161ec1f4b89eb7b0198aa9ec, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

@@ -6,12 +6,25 @@ public class ItemBehaviour : MonoBehaviour {
 
     public Item item;
     public bool pickedup = false;
-
-    private void OnTriggerEnter(Collider other)
+    public GameEvent ItemPickedUp;
+    
+    public void OnTriggerEnterEventHandler(Object[] args)
     {
-        if (pickedup == true) return;
+        var sender = args[0] as GameObject;
+        var other = args[1] as GameObject;
+        if (sender != gameObject || pickedup)
+            return;
+        
         pickedup = true;
-        other.GetComponent<InventoryBehaviour>().AddToInventory(item);
-        GetComponent<MeshRenderer>().material.color = Color.cyan;
+        var ib = other.GetComponent<InventoryBehaviour>();
+        if (ib == null)
+        {
+            Debug.Log("no inventory on " + other.name);
+            return;
+        }
+
+        ib.AddToInventory(item);
+        ItemPickedUp.Raise(this, item);
+        Destroy(gameObject, 1);
     }
 }
